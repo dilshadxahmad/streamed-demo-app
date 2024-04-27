@@ -9,6 +9,13 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
+# Provider for state management
+  provider: ^6.1.2
+
+# Responsive sizer for screen responsive UI
+  flutter_screenutil: ^5.9.0
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
@@ -17,3 +24,12 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/svgs/
+  fonts:
+    - family: Urbanist
+      fonts:
+      - asset: assets/fonts/UrbanistBold.ttf
+      - asset: assets/fonts/UrbanistLight.ttf
+      - asset: assets/fonts/UrbanistRegular.ttf
