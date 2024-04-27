@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'package:streamed_demo_app/controllers/onboarding/onboarding_view_controller.dart';
+import 'package:streamed_demo_app/controllers/theme/theme_controller.dart';
 import 'package:streamed_demo_app/res/constants/app_constants.dart';
 import 'package:streamed_demo_app/res/theme/app_theme.dart';
 import 'package:streamed_demo_app/res/routes/app_keys.dart';
@@ -19,6 +20,9 @@ class StreamedApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider<OnboardingViewController>(
           create: (context) => OnboardingViewController(),
+        ),
+        ChangeNotifierProvider<ThemeController>(
+          create: (context) => ThemeController(),
         ),
       ],
       child: ScreenUtilInit(

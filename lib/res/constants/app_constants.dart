@@ -5,6 +5,7 @@ const splashBgImage = 'assets/images/splash_bg.gif';
 const onboardingImage1 = 'assets/images/image01.png';
 const onboardingImage2 = 'assets/images/image02.png';
 const onboardingImage3 = 'assets/images/image03.png';
+const laptopImage = 'assets/images/laptop.png';
 
 //-----colors-----//
 const Color whiteColor = Color(0xFFFFFFFF);

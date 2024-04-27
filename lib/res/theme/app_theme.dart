@@ -13,8 +13,13 @@ class AppTheme {
       colorScheme: ColorScheme.fromSwatch(
         backgroundColor: whiteColor,
       ),
+      bottomAppBarTheme: BottomAppBarTheme(
+        padding: EdgeInsets.symmetric(horizontal: 32.h, vertical: 13.h),
+        color: whiteColor,
+      ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: whiteColor,
+        elevation: 0,
         showUnselectedLabels: true,
         unselectedLabelStyle: TextStyle(
           fontFamily: urbanistFont,
@@ -28,6 +33,16 @@ class AppTheme {
           fontSize: 10.sp,
           fontWeight: FontWeight.w700,
         ),
+      ),
+      switchTheme: SwitchThemeData(
+        thumbIcon: const MaterialStatePropertyAll(
+          Icon(
+            Icons.light_mode_outlined,
+            color: whiteColor,
+          ),
+        ),
+        thumbColor: const MaterialStatePropertyAll(primaryBlueColor),
+        trackColor: MaterialStatePropertyAll(primaryBlueColor.withOpacity(0.5)),
       ),
       textTheme: TextTheme(
         displayLarge: TextStyle(
@@ -68,8 +83,13 @@ class AppTheme {
       colorScheme: ColorScheme.fromSwatch(
         backgroundColor: accentBlueColor,
       ),
+      bottomAppBarTheme: BottomAppBarTheme(
+        padding: EdgeInsets.symmetric(horizontal: 32.h, vertical: 13.h),
+        color: primaryBlueColor,
+      ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor: primaryBlueColor,
+        elevation: 0,
         showUnselectedLabels: true,
         unselectedLabelStyle: TextStyle(
           fontFamily: urbanistFont,
@@ -83,6 +103,16 @@ class AppTheme {
           fontSize: 10.sp,
           fontWeight: FontWeight.w700,
         ),
+      ),
+      switchTheme: SwitchThemeData(
+        thumbIcon: const MaterialStatePropertyAll(
+          Icon(
+            Icons.dark_mode_outlined,
+            color: primaryBlueColor,
+          ),
+        ),
+        thumbColor: const MaterialStatePropertyAll(whiteColor),
+        trackColor: MaterialStatePropertyAll(primaryBlueColor.withOpacity(0.5)),
       ),
       textTheme: TextTheme(
         displayLarge: TextStyle(

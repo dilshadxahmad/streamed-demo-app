@@ -4,6 +4,9 @@ import 'package:streamed_demo_app/res/constants/app_constants.dart';
 
 class GradientButton extends StatelessWidget {
   final BorderRadiusGeometry? borderRadius;
+  final double? height;
+  final double? width;
+  final EdgeInsetsGeometry? padding;
   final VoidCallback? onPressed;
   final Widget child;
 
@@ -12,13 +15,17 @@ class GradientButton extends StatelessWidget {
     required this.onPressed,
     required this.child,
     this.borderRadius,
+    this.height,
+    this.width,
+    this.padding,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final borderRadius = this.borderRadius ?? BorderRadius.circular(100);
     return Container(
-      height: 55.h,
+      height: height ?? 55.h,
+      width: width,
       decoration: BoxDecoration(
         gradient: cyanWhiteGradient,
         borderRadius: borderRadius,
@@ -29,6 +36,7 @@ class GradientButton extends StatelessWidget {
           backgroundColor: Colors.transparent,
           shadowColor: Colors.transparent,
           shape: RoundedRectangleBorder(borderRadius: borderRadius),
+          padding: padding,
         ),
         child: child,
       ),
